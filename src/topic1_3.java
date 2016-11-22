@@ -5,7 +5,7 @@ import java.util.Arrays;
  * 给定两个字符串,请编写程序,确定其中一个字符串的字符重新排列后,能否变成两一个字符串
  * 要点:1.变位词是否区分大小写;2.是否考虑空白;3.字符串问题一定得询问编码
  */
-class topic1_3 {
+public class topic1_3 {
     String str1="abcdeedcba",str2="edcbaabcde";
 
     topic1_3(){
@@ -30,7 +30,7 @@ class topic1_3 {
      * @return
      * time:274635
      */
-    private boolean method1(){
+    public boolean method1(){
         if(str1.length()!=str2.length()){
             return false;
         }
@@ -42,7 +42,7 @@ class topic1_3 {
      * @return
      * time:9931
      */
-    private boolean method2(){
+    public boolean method2(){
         if(str1.length()!=str2.length()){
             return false;
         }

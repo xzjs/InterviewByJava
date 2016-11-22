@@ -4,7 +4,7 @@ import java.util.Arrays;
  * 实现一个算法,确定一个字符串中的所有字符是否全都不同。假设不允许势使用额外的数据结构
  * 此处有一个非常巧妙的思路,先询问字符串的编码是什么,如果是ASII码的话,只有256个,若字符串长度超过256则必定有重复字符
  */
-class topic1_1 {
+public class topic1_1 {
     private String str="abcdefghijklmnopqrstuvwxyza";
 
     topic1_1(){
@@ -30,7 +30,7 @@ class topic1_1 {
      * 自己想出的算法,最笨的两层循环查找
      * time:11914
      */
-    private void method1(){
+    public void method1(){
         for (int i=0;i<str.length();i++){
             for(int j=i+1;j<str.length();j++){
                 if(str.charAt(i)==str.charAt(j)){
@@ -44,7 +44,7 @@ class topic1_1 {
      * 对字符串进行排序,但由于对Java的不熟悉,字符串和字符数组之间转换花费了很多时间
      * time:261106
      */
-    private void method2(){
+    public void method2(){
         char[] cs=str.toCharArray();
         Arrays.sort(cs);
         str=new String(cs);
@@ -59,7 +59,7 @@ class topic1_1 {
      * 用一个存储bool变量的数组来存储状态
      * time:7276
      */
-    private void method3(){
+    public void method3(){
         boolean[] char_set=new boolean[256];
         for(int i=0;i<str.length();i++){
             int val=str.charAt(i);
@@ -74,7 +74,7 @@ class topic1_1 {
      * 如何也不会想到的位运算
      * time:3657
      */
-    private void method4(){
+    public void method4(){
         int checker=0;
         for(int i=0;i<str.length();i++){
             int val=str.charAt(i)-'a';
